@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40300%3B400&family=Roboto%3Awght%40700&family=Rubik%3Aital%2Cwght%400%2C400%3B1%2C300%3B1%2C400&display=swap%27%29%3B');
+
+#tirar espaçamentos
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    /* Deixando 100% datela */
+    height: 100rv;
+    width: 100rv;
+
+    /* Codigo de gradiente se nao fosse usar a foto */
+    background: linear-gradient(72deg, #4280e1 1%, #3decb1 72%);
+    display: flex;
+        /* foto de fundo */
+        background: url(./images/cool-background\ \(3\).png) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    /* Centralizando todos elementos do login ao centro */
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    font-size: 62.5%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 48rem;
+    min-width: 44rem;
+    max-height: 50rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+header h1{
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #444346;
+    font-size: 6.4rem;
+    margin-left: 2.5rem;
+
+}
+
+main {
+    margin: auto;
+    width: 85%;
+    height: 70%;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    /* Espaçamento por igual */
+    justify-content: space-between;
+    /* Borda do login e senha */
+    border-radius: 1rem;
+    height: 5.5rem;
+    border: 0.1rem solid #444346;
+    /* Inverte a posição do input com o label*/
+    flex-direction: row-reverse;
+    transition: 0.3s;
+}
+
+/* Animação de quando passar o mouse */
+.input-field:hover input{
+    border: #444346;
+    background-color: #4d4d4d;
+    transition: 0.3s;
+}
+.input-field input{
+    border: none;
+    outline: none;
+    background: #444346;
+    width: 82%;
+    height: 55px;
+    padding-left: 3.0rem;
+    font-family: "Poppins";
+    border-radius: 0 0.8rem 0.8rem 0;
+    transition: .3s;
+}
+
+/*MODIFICANDO TODOS ELEMENTOS*/
+::-webkit-input-placeholder{
+    color: #cec8c8;
+    font-weight: 30rem;
+}
+
+/* Redimensionando os quadrados dos icones user and pass*/
+.input-field label{
+    height: 5.5rem;
+    width: 18%;
+    /*Centralizando os icones*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Redimensionando os icones user and pass*/
+.input-field label img{
+    width: 3.3rem;
+    height: 3.3rem;
+}
+
+/*Personalizando Labels*/
+.checkbox label{
+    color: #444346;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    /*Mostra o dedinho na hora de clicar (muda o cursor)*/
+    cursor: pointer;
+}
+
+.checkbox label:hover > label{
+    color: #7e7c83;
+}
+
+/*Personalizando Checkbok*/
+.checkbox input{
+    display: none;
+}
+
+.checkbox input + label:before {
+    content: '';
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle;
+    border: 2px solid #444346;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.checkbox input:checked + label:before {
+    background: url('./images/check.svg') no-repeat center;
+
+}
+
+/* confirgurando o botão de login*/
+form button {
+    height: 55px;
+    background-color: #444346;
+    border: none;
+    border-radius: 1.0rem;
+    color: #cec8c8;
+    outline: none;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-family: rubik;
+}
+
+form button:hover {
+    background: #545357 ;
+}
+/*Personalizando e separando labens minha senha e criar nova senha*/
+.content footer{
+    margin:auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    border-bottom: 2px solid #cec8c8;
+}   
+
+/*Personalizando escrita esqueci minha senha e criar nova conta*/
+footer a {
+    color: #444346;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 40rem;
+    font-family: rubik;
+    font-style: italic;
+}
+
+/*modicando a fonte do esqueci minha senha*/
+footer span a{
+    font-weight: 30rem;
+    color:#545357
+}
+
+/* responsividade da aplicacao */
+@media(max-width: 600px) {
+    html {
+        font-size: 58%;
+    }
+    header h1 {
+        font-size: 5.5rem;
+    }
+}
+
+@media(max-width: 470px) {
+    html {
+        font-size: 56%;
+    }
+    header h1 {
+        display: none;
+    }
+    .content main {
+        width: 80%;
+    }
+    .content main, .content footer {
+        width: 100%;
+    }
+}
+    
+
+
+
+
